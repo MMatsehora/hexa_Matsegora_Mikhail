@@ -1,0 +1,163 @@
+@media screen and (max-width: 1200px){
+    .advantages__img{
+        width: 7.2rem;
+    }
+    .advantages__title{
+        font-size: 1.6rem;
+    }
+    .advantages__text{
+        font-size: 1.4rem;
+    }
+    .owl-carousel .owl-nav{
+        left: 1.5rem;
+        margin-left: inherit;
+    }
+    .wallpaper__wrap{
+        left: 0;
+    }
+}
+@media screen and (max-height: 800px){
+    .advantages__img{
+        width: 7.2rem;
+    }
+    .advantages__title{
+        font-size: 1.6rem;
+    }
+    .advantages__text{
+        font-size: 1.4rem;
+    }
+    .owl-carousel .owl-nav{
+        top: 57%;
+    }
+}
+@media screen and (max-width: 800px){
+    body, html, .main-wrap{
+        height: auto;
+    }
+    .advantages{
+        position: inherit;
+        background-color: silver;
+    }
+    .owl-carousel .owl-nav{
+        display: none;
+    }
+    .wallpaper .wallpaper__item .container{
+        padding: 6.4rem 1.5rem 3.2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .advantages{
+        &__col{
+            width: 100%;
+        }
+        &__row{
+            flex-wrap: wrap;
+        }
+    }
+    .wallpaper__h1{
+        font: 900 5rem/4.4rem $base-font;
+        padding: 1.5rem .5rem 0 2rem;
+        margin-bottom: 0;
+    }
+    .wallpaper__block{
+        padding: .4rem 2.8rem 1rem 0.3rem;
+        span{
+            font: italic 900 2.6rem/3.2rem $base-font;
+            padding: 0 1.5rem .3rem 1.7rem;
+        }
+        &:before{
+            left: -1.4rem;
+        }
+    } 
+    .wallpaper__price{
+        padding: .8rem 1rem 0rem 1.4rem;
+        margin-left: -.5rem;
+        &-num{
+            font: 3.5rem/3.5rem "Intro",serif;
+            margin: 0 .5rem 0 1rem;
+        }
+    }
+    .wallpaper__text{
+        font-size: 1.6rem;
+    }
+    .wallpaper__btn{
+        font-size: 1.6rem;
+        padding: .4rem 1rem;
+    }
+    .wallpaper__wrap:after{
+        background-image: none;
+        background-color: rgba(0, 0, 0, .3);
+        left: -1.5rem;
+        margin-left: inherit;
+    }
+    .header__nav-list{
+        font-size: 1.3rem;
+    }
+    .header__logo-text{
+        display: none;
+    }
+    .header__info-phone{
+        font-size: 2.5rem;
+    }
+    .header__logo-link{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 480px){
+    .header__info, .header__bottom{
+        display: none;
+    }
+    .wallpaper .wallpaper__item .container{
+        padding: 3.2rem 1.5rem 3.2rem;
+    }
+    .header__hamburger{
+        display: block;
+    }
+    .header__mob{
+        display: block;
+    }
+    .wallpaper__item{
+        min-height: 34rem;
+    }
+    .wallpaper__wrap{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+        &::before{
+            display: none;
+        }
+    }
+    .wallpaper__h1{
+        padding: 1rem 1rem 0;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        box-sizing: border-box;
+        max-width: 100%;
+        &:before{
+            transform: inherit;
+        }
+    }
+    .wallpaper__text{
+        text-align: center;
+    }
+    .wallpaper__btn{
+        display: block;
+        margin: 0 auto;
+    }
+    .wallpaper__block{
+        padding: 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        span{
+            padding: 0;
+        }
+        &:before{
+            transform: inherit;
+            left: 0;
+        }
+    }
+    .wallpaper__price:before{
+        transform: inherit;
+    }
+}

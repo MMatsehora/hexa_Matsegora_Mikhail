@@ -1,0 +1,49 @@
+$font-path : '../fonts/';
+
+@font-face {
+  font-display: swap;
+  font-family: 'Intro';
+  src:  url('#{$font-path}Intro/Intro-Regular.woff') format('woff'), 
+        url('#{$font-path}Intro/Intro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Intro';
+  src:  url('#{$font-path}Intro/Intro-Black.woff') format('woff'), 
+        url('#{$font-path}Intro/Intro-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Intro';
+  src:  url('#{$font-path}Intro/Intro-Black-Italic.woff') format('woff'),
+  		url('#{$font-path}Intro/Intro-Black-Italic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Proxima Nova';
+  src:  url('#{$font-path}ProximaNova/ProximaNova-Regular.woff') format('woff'), 
+        url('#{$font-path}ProximaNova/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Proxima Nova';
+    src:  url('#{$font-path}ProximaNova/ProximaNova-Bold.woff') format('woff'), 
+          url('#{$font-path}ProximaNova/ProximaNova-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+$font-proxima: 'Proxima Nova', sans-serif;
+$base-font: 'Intro', serif;
