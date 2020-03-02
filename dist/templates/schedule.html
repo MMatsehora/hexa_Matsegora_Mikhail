@@ -1,0 +1,67 @@
+
+<div class="schedule">
+  <div class="schedule__head">
+    <div class="schedule__select-box select-box">
+      <div class="select-box__current" tabindex="1">
+        <div class="select-box__value">
+          <input class="select-box__input" id="0" type="radio" value="1" name="Ben" checked="checked"/>
+          <p class="select-box__input-text">Просмотренные</p>
+        </div>
+        <div class="select-box__value">
+          <input class="select-box__input" id="1" type="radio" value="2" name="Ben" checked="checked"/>
+          <p class="select-box__input-text">Показать все</p>
+        </div>
+        <div class="select-box__value">
+          <input class="select-box__input" id="2" type="radio" value="3" name="Ben" checked="checked"/>
+          <p class="select-box__input-text">Новое</p>
+        </div>
+        <div class="select-box__value">
+          <input class="select-box__input" id="3" type="radio" value="4" name="Ben" checked="checked"/>
+          <p class="select-box__input-text">События</p>
+        </div>
+        <div class="select-box__value">
+          <input class="select-box__input" id="4" type="radio" value="5" name="Ben" checked="checked"/>
+          <p class="select-box__input-text">Праздники</p>
+        </div>
+      </div>
+      <ul class="select-box__list">
+        <li>
+          <label class="select-box__option" for="0" aria-hidden="aria-hidden">Просмотренные</label>
+        </li>
+        <li>
+          <label class="select-box__option" for="1" aria-hidden="aria-hidden">Показать все</label>
+        </li>
+        <li>
+          <label class="select-box__option" for="2" aria-hidden="aria-hidden">Новое</label>
+        </li>
+        <li>
+          <label class="select-box__option" for="3" aria-hidden="aria-hidden">События</label>
+        </li>
+        <li>
+          <label class="select-box__option" for="4" aria-hidden="aria-hidden">Праздники</label>
+        </li>
+      </ul>
+    </div>
+    <div class="schedule__period">
+      <div class="schedule__period-text">Период:</div>
+      <div class="schedule__period-wrap">
+        <input class="input input--radius-left" type="text" placeholder="01.01.19"/><span class="schedule__period-icon"><i class="icon-calendar"></i></span>
+        <input class="input input--radius-right" type="text" placeholder="08.01.19"/>
+      </div>
+      <div class="schedule__tabs tabs">
+        <div class="tabs__item">
+          <button class="tabs__btn" type="button">День</button>
+        </div>
+        <div class="tabs__item">
+          <button class="tabs__btn tabs__btn--active" type="button">Неделя</button>
+        </div>
+        <div class="tabs__item">
+          <button class="tabs__btn" type="button">Месяц</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="schedule__bottom">
+    <canvas id="myChart"></canvas>
+  </div>
+</div>

@@ -11,57 +11,81 @@ var uglify       =  require('gulp-uglify');
 var imagemin 	 =  require('gulp-imagemin');
 var concat       =  require('gulp-concat');
 
+const paths = {
+    root: './dist',
+    pug: {
+        src: './src/**/*.pug',
+        dest: './dist'
+    },
+    scss: {
+        src: './src/scss/**/*.scss',
+        dest: './dist/css'
+    },    
+    img: {
+        src: './src/img/*',
+        dest: './dist/img/'
+    },
+    js: {
+        src: './src/js/*',
+        dest: './dist/js'
+    },
+    libs_js:{
+        dest: './src/js'
+    },
+    fonts: {
+        src: './src/fonts/**/*',
+        dest: './dist/fonts'
+    }
+}
 
 //удаляем папку dist
 function clean(){
-	return del(['dist/*'])
+	return del([paths.root])
 }
-/*-----компилируем pug и перемещаем в dist
+
+//компилируем pug и перемещаем в dist
 function pug_comp(){
-	return gulp.src('./src/*.pug')
+	return gulp.src(paths.pug.src)
 		.pipe(pug({
 			pretty: true
 		}))
-		.pipe(gulp.dest('./dist'))
+		.pipe(gulp.dest(paths.pug.dest))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
-}----*/
-function html(){
-    return gulp.src('./src/*.html')
-		.pipe(gulp.dest('./dist'))
-		.on('end', browserSync.reload);
 }
 
 //конкатенация библиотек js
 function libs_js(){
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
-		'src/libs/owl.carousel/dist/owl.carousel.min.js',
+        'src/libs/owl.carousel/dist/owl.carousel.min.js',
+        'src/libs/chart.js/dist/Chart.min.js',
+        'src/libs/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js',
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('src/js'));
+	.pipe(gulp.dest(paths.libs_js.dest));
 }
 
 function js(){
-	return gulp.src('./src/js/*')
-		//.pipe(uglify())
-		.pipe(gulp.dest('./dist/js'))
+	return gulp.src(paths.js.src)
+		.pipe(uglify())
+		.pipe(gulp.dest(paths.js.dest))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 }
 //перемещаем шрифты в dist
 function fonts(){
-	return gulp.src('./src/fonts/**/*')
-		.pipe(gulp.dest('./dist/fonts'))
+	return gulp.src(paths.fonts.src)
+		.pipe(gulp.dest(paths.fonts.dest))
 }
 //перемещаем картинки в dist
 function img(){
-	return gulp.src('./src/img/*')
+	return gulp.src(paths.img.src)
 		.pipe(imagemin())
-		.pipe(gulp.dest('./dist/img/'))
+		.pipe(gulp.dest(paths.img.dest))
 }
 
 //компиляция файлов sass/scss и перемещаем в dist
@@ -69,12 +93,12 @@ function scss(){
 	return gulp.src('./src/scss/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			overrideBrowserslist: ['last 2 versions'],
 			cascade: false
 		}))
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./dist/css'))
+		.pipe(gulp.dest(paths.scss.dest))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -83,22 +107,21 @@ function scss(){
 function server(){
 	browserSync.init({
 		server: {
-			baseDir: './dist'
+			baseDir: paths.root
 		},
 		notify: false
 	});
 }
 //следим за изменениями файлов в браузере
 function watch_file(){
-	//gulp.watch('./src/*.pug', pug_comp);
-    gulp.watch('./src/*.html', html);
-	gulp.watch('./src/scss/**/*.scss', scss);
-	gulp.watch('./src/js/*.js', js);	
+	gulp.watch(paths.pug.src, pug_comp);
+	gulp.watch(paths.scss.src, scss);
+	gulp.watch(paths.js.src, js);	
 }
 
 //сборка всего
 gulp.task('dev', gulp.series(clean,
-	gulp.parallel(html, scss, libs_js, js, fonts, img),
+	gulp.parallel(pug_comp, scss, libs_js, js, fonts, img),
 	gulp.parallel(watch_file, server)
 	));
 

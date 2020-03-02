@@ -1,12 +1,60 @@
-@mixin rectangle(){
+//------------------------Media
+$mobile-screen: 480px;
+$tablet-screen: 768px;
+$tablet-screen-big: 800px;
+$laptop-screen: 1024px;
+$desktop-screen: 1200px;
+$large-screen: 1440px;
+$huge-screen: 1920px;
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobile-screen}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: #{$tablet-screen}) {
+        @content;
+    }
+}
+
+@mixin tablet-big {
+    @media screen and (max-width: #{$tablet-screen-big}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: #{$laptop-screen}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: #{$desktop-screen}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (max-width: #{$large-screen}) {
+        @content;
+    }
+}
+
+@mixin huge {
+    @media screen and (max-width: #{$huge-screen}) {
+        @content;
+    }
+}
+
+//-------------------------------------------------------
+
+@mixin social-link-decor {
     content: '';
     position: absolute;
-    top: 0;
-    opacity: 0.7;
-    transform: skew(-16deg);
-    height: 100%;
+    border-bottom: .4rem solid #DE1010;
+    bottom: 0;
     width: 100%;
-    transform-origin: 0 100%;
-    z-index: -1;
 }
-    

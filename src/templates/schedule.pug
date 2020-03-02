@@ -1,0 +1,46 @@
+.schedule
+    .schedule__head
+        .schedule__select-box.select-box
+            .select-box__current(tabindex='1')
+                .select-box__value
+                    input#0.select-box__input(type='radio' value='1' name='Ben' checked='checked')
+                    p.select-box__input-text Просмотренные
+                .select-box__value
+                    input#1.select-box__input(type='radio' value='2' name='Ben' checked='checked')
+                    p.select-box__input-text Показать все
+                .select-box__value
+                    input#2.select-box__input(type='radio' value='3' name='Ben' checked='checked')
+                    p.select-box__input-text Новое
+                .select-box__value
+                    input#3.select-box__input(type='radio' value='4' name='Ben' checked='checked')
+                    p.select-box__input-text События
+                .select-box__value
+                    input#4.select-box__input(type='radio' value='5' name='Ben' checked='checked')
+                    p.select-box__input-text Праздники
+            ul.select-box__list
+                li
+                  label.select-box__option(for='0' aria-hidden='aria-hidden') Просмотренные
+                li
+                  label.select-box__option(for='1' aria-hidden='aria-hidden') Показать все
+                li
+                  label.select-box__option(for='2' aria-hidden='aria-hidden') Новое
+                li
+                  label.select-box__option(for='3' aria-hidden='aria-hidden') События
+                li
+                  label.select-box__option(for='4' aria-hidden='aria-hidden') Праздники
+        .schedule__period
+            .schedule__period-text Период:
+            .schedule__period-wrap
+                input(type="text" placeholder="01.01.19").input.input--radius-left
+                span.schedule__period-icon
+                    i.icon-calendar
+                input(type="text" placeholder="08.01.19").input.input--radius-right
+            .schedule__tabs.tabs
+                .tabs__item
+                    button(type="button").tabs__btn День
+                .tabs__item
+                    button(type="button").tabs__btn.tabs__btn--active Неделя
+                .tabs__item
+                    button(type="button").tabs__btn Месяц
+    .schedule__bottom
+        canvas#myChart

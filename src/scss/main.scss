@@ -1,13 +1,21 @@
 @import 'base/reset.scss';
 @import 'base/mixin.scss';
 @import 'base/fonts.scss';
+@import 'base/fontello';
 @import 'base/variable.scss';
 /*----------------------*/
 @import '../libs/owl.carousel/src/scss/owl.carousel.scss';
 @import '../libs/owl.carousel/src/scss/owl.theme.default.scss';
 /*----------------------*/
-@import 'layout/buttons.scss';
 @import 'layout/general.scss';
+@import 'layout/header.scss';
+@import 'layout/sidemenu.scss';
+@import 'layout/menu.scss';
+@import 'layout/statistics.scss';
+@import 'layout/select-box.scss';
+@import 'layout/tabs.scss';
+@import 'layout/schedule.scss';
+@import 'layout/news.scss';
 @import 'layout/media.scss';
 
 

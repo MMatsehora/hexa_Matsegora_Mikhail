@@ -1,0 +1,139 @@
+.header{
+    position: fixed;
+    width: calc(100% - 24rem);
+    top: 0;
+    z-index: 2;
+    background-color: #2B2B2B;
+    @include laptop{
+        width: 100%;
+    }
+    &__logo{
+        display: none;
+        @include laptop{
+            display: inline-flex;
+        }
+    }
+    &__cash{
+        display: none;
+        @include laptop{
+            display: block;
+        }
+    }
+    &__top{
+        position: relative;
+        padding: 1.7rem 1.2rem 2.1rem;
+        min-height: 6.1rem;
+        box-sizing: border-box;
+        border-bottom: .1rem solid $clr-beta;
+        @include laptop{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .7rem 1.2rem;
+            min-height: 5rem;
+        }
+        @include mobile{
+            padding: .5rem;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            border-bottom: .4rem solid $clr-alpha;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0rem;
+            width: calc(100% - 2.4rem);
+            @include laptop{
+                display: none;
+            }
+        }
+        &-text{
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+    &__bottom{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        @include mobile{
+            max-height: max-content;
+            overflow: inherit;
+        }
+        &-text{
+            position: relative;
+            text-align: center;
+            background-color: #2B2B2B;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: .5rem 0;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                border-bottom: .3rem solid $clr-alpha;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        &-btn{
+            position: absolute;
+            bottom: -1.7rem;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            cursor: pointer;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #2B2B2B;
+            border: .1rem solid $clr-beta;
+            img{
+                position: relative;
+                top: .8rem;
+            }
+        }
+    }
+    &__btn{
+        position: relative;
+        display: none;
+        height: 3.5rem;
+        width: 3.5rem;
+        cursor: pointer;
+        border: .2rem solid $clr-alpha;
+        box-sizing: border-box;
+        border-radius: .3rem;
+        padding: .6rem .3rem;
+        @include laptop{
+            display: block;
+        }
+        &--user:before{
+            content: '\e801';
+            position: absolute;
+            font-size: 2rem;
+            font-family: 'fontello';
+            left: 50%;
+            color: #A9A9A9;
+            transform: translateX(-50%);
+        }
+        &-line{
+            background: #A9A9A9;
+            height: .3rem;
+            transition: opacity .35s ease-in,transform .35s ease-in;
+            &:not(:last-child){
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}
+
+.icon-close:before{
+    content: '\e818'; 
+    top: .5rem;
+}

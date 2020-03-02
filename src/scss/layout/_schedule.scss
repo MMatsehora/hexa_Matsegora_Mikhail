@@ -1,0 +1,73 @@
+.schedule{
+    flex-grow: 1;
+    margin-right: 2.2rem;
+    @include desktop{
+        margin: 0 0 .5rem 0;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem 0rem .5rem .8rem;
+        background: #2B2B2B;
+        border-radius: .3rem;
+        margin-bottom: 1.7rem;
+        @include mobile{
+            padding-left: .5rem;
+        }
+    }
+    &__select-box{
+        width: 15rem;
+        @include tablet{
+            width: 10.8rem;
+            font-size: 1.2rem;
+        }
+        @include mobile{
+            padding: .1rem 2.3rem .1rem .5rem;
+        }
+    }
+    &__period{
+        display: flex;
+        align-items: center;
+        &-icon{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 3rem;
+            min-height: 2.8rem;
+            font-size: 2rem;
+            border-top: .1rem solid $clr-gamma;
+            border-bottom: .1rem solid $clr-gamma;
+            @include mobile{
+                min-width: 2.5rem;
+                min-height: 2.3rem;
+                font-size: 1.5rem;
+            }
+        }
+        &-wrap{
+            display: flex;
+        }
+        &-text{
+            margin-right: .5rem;
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+    &__tabs{
+        margin-left: .8rem;
+        @include mobile{
+            margin-left: .4rem;
+        }
+    }
+    &__bottom{
+        height: 49.2rem;
+        @include mobile{
+            height: 36.5rem;
+        }
+    }
+}
+
+#myChart{
+    width: 100% !important;
+}

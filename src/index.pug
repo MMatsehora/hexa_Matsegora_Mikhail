@@ -1,0 +1,48 @@
+doctype html
+include templates/head
+body
+    .main-wrap
+        include templates/sidemenu-left
+        .main-content
+            include templates/header
+            .statistics.statistics--content
+                .statistics__item
+                    .statistics__wrap-icon
+                        i.statistics__icon.icon-date
+                    .statistics__content
+                        .statistics__date 07.02.2019, чт
+                .statistics__item
+                    .statistics__wrap-icon
+                        i.statistics__icon.icon-convert
+                    .statistics__content
+                        .statistics__num 1 000
+                        .statistics__date Переходы
+                .statistics__item
+                    .statistics__wrap-icon
+                        i.statistics__icon.icon-registr
+                    .statistics__content
+                        .statistics__num 10 000
+                        .statistics__date Регистрации
+                .statistics__item
+                    .statistics__wrap-icon
+                        i.statistics__icon.icon-deposits
+                    .statistics__content
+                        .statistics__num 100
+                        .statistics__date Первые депозиты
+                .statistics__item
+                    .statistics__wrap-icon
+                        i.statistics__icon.icon-income
+                    .statistics__content
+                        .statistics__num.text-green 100 000.00 USD
+                        .statistics__date Доход за сегодня
+            .banner
+                .banner__content.owl-carousel
+                    .banner__item(style="background-image: url(../img/img_banner.jpg);")
+                    .banner__item(style="background-image: url(../img/img_banner2.jpg);")
+                    .banner__item(style="background-image: url(../img/img_banner3.jpg);")
+            .main-content__wrap
+                include templates/schedule
+                include templates/news
+        include templates/sidemenu-right
+    script(src='js/libs.min.js')
+    script(src='js/main.js')

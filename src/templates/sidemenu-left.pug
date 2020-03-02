@@ -1,0 +1,81 @@
+aside.sidemenu.sidemenu--left
+    .sidemenu__top
+        a(href="#").sidemenu__top-logo.logo
+            img(src="./img/logo.png", alt="").logo__img
+        .sidemenu__top-info.info
+            .info__row
+                .info__item
+                    button(type="button").info__item-btn
+                        i.info__item-icon.icon-letter
+                .info__item.info__item--indent
+                    .info__item-name Александр
+                .info__item
+                    button(type="button").info__item-btn
+                        i.info__item-icon.icon-out
+                .info__item
+                    button(type="button").info__item-btn
+                        i.info__item-icon.icon-settings
+                .info__item
+                    .info__item-flag
+                        img(src="./img/img_flag.jpg", alt="").info__item-img
+            .info__cash 0.00 usd
+        nav.sidemenu__menu.menu
+            ul.menu__list
+                li.menu__item
+                    a(href="#").menu__link
+                        span.menu__wrap-icon 
+                            i.menu__icon.icon-home
+                        | Главная
+                li.menu__item
+                    button(type="button").menu__btn
+                        span.menu__wrap-icon 
+                            i.menu__icon.icon-promo
+                        | Промо
+                    ul.menu__list.submenu
+                        li.menu__item
+                            a(href="#").menu__link Создание нового промо
+                        li.menu__item
+                            a(href="#").menu__link Мои промо
+                        li.menu__item
+                            a(href="#").menu__link Персональкое промо
+                li.menu__item
+                    button(type="button").menu__btn
+                        span.menu__wrap-icon 
+                            i.menu__icon.icon-statistics
+                        | Статистика
+                    ul.menu__list.submenu
+                        li.menu__item
+                            a(href="#").menu__link Общая
+                        li.menu__item
+                            a(href="#").menu__link По игрокам
+                        li.menu__item
+                            a(href="#").menu__link По рефералам
+                li.menu__item
+                    a(href="#").menu__link 
+                        span.menu__wrap-icon 
+                            i.menu__icon.icon-finance
+                        | Финансы
+                li.menu__item
+                    a(href="#").menu__link 
+                        span.menu__wrap-icon 
+                            i.menu__icon.menu__icon--size.icon-news
+                        | Новости
+                li.menu__item
+                    a(href="#").menu__link 
+                        span.menu__wrap-icon 
+                            i.menu__icon.icon-support
+                        | Поддержка
+    .sidemenu__bottom
+        .sidemenu__bottom-person.person
+            .person__title Ваш персональный менеджер:
+            .person__text Имя: Дмитрий
+            .person__text Telegram: @dm_montana
+            .person__text E-Mail: Manager@pin-up.partners
+        .sidemenu__bottom-referal.referal
+            .referal__item
+                i.referal__icon.icon-referal-one
+            .referal__item
+                .referal__cash 1 000.00 USD
+                .referal__text Реферальные
+            .referal__item
+                i.referal__icon.icon-referal-two

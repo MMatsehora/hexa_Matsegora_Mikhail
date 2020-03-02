@@ -1,0 +1,59 @@
+.tabs{
+    display: flex;
+    &__btn{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        color: $clr-beta;
+        padding: .4rem .8rem;
+        border-left: .1rem solid $clr-beta;
+        @include tablet{
+            display: none;
+        }
+        @include mobile{
+            font-size: 1.2rem;
+        }
+        &--active{
+            color: white;
+            font-weight: bold;
+            @include tablet{
+                display: block;
+                padding-right: 1.5rem;
+                &:before{
+                   content: '\e81b';
+                    position: absolute;
+                    font-family: 'fontello';
+                    font-size: .6rem;
+                    right: .4rem;
+                }
+            }
+            @include mobile{
+                padding-left: .4rem;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                border-bottom: .5rem solid $clr-alpha;
+                width: 100%;
+                left: 0;
+                bottom: -.5rem;
+            }
+        }
+        &:hover{
+            color: white;
+            &:after{
+                content: '';
+                position: absolute;
+                border-bottom: .5rem solid $clr-alpha;
+                width: 100%;
+                left: 0;
+                bottom: -.5rem;
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+}
